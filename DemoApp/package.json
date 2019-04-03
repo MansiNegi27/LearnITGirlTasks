@@ -1,0 +1,19 @@
+{
+  "name": "demoapp",
+  "version": "1.0.0",
+  "description": "An app which simply publishes some particular tweets",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mansi Negi",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.21"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
