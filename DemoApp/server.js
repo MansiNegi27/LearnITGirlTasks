@@ -1,11 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const path = require('path');
 const config = require('./config.js');
 const tweetRoute = require('./routes/tweets.js')
 const app = express();
+const cors = require('cors');
 
 //bodyparser middleware
+app.use(cors())
 app.use(express.json());
 
 // DB Config
@@ -20,6 +21,6 @@ mongoose.connect(db,{useNewUrlParser :true},function(err){
 //Use Routes now
 app.use('/api/tweets',tweetRoute);
 
-app.listen(3000,function(){
+app.listen(config.port,function(){
     console.log("Server is Listening");
 });
